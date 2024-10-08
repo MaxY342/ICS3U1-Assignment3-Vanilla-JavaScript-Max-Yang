@@ -1,0 +1,36 @@
+.calculators {
+    display: grid;
+    grid-template-columns: 45vw 45vw;
+    gap: 100px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    background-color: #067fdf;
+    margin: 30px;
+    padding: 1rem;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+}
+
+label {
+    font-size: 20px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+input {
+    height: 2rem;;
+}

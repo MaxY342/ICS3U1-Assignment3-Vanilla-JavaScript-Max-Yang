@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Netflix</title>
+        <title>Calculators</title>
         <link href="/static/styles.css" rel="stylesheet">
         <script src="/static/script.js"></script>
     </head>
     <body>
-        <div class="cosine-law">
-            <h1>Cosine Law</h1>
-            <h2>Side a</h2>
-            <input>
-            <h2>Side b</h2>
-            <input>
-            <h2>Angle c</h2>
-            <input>
-            <h2>Side c (Result)</h2>
-            <input>
-            <button>Calculate</button>
-        </div>
-        <div class="asymptote">
-
-        </div>
-        <div class="pi-approximation">
-
+        <div class="calculators">
+            <form class="cosine-law">
+                <h1>Cosine Law</h1>
+                <label>Side a:</label>
+                <input type="number" id="cosine-side-a">
+                <label>Side b:</label>
+                <input type="number" id="cosine-side-b">
+                <label>Angle c:</label>
+                <input type="number" id="cosine-angle-c">
+                <label>Side c (Result):</label>
+                <input readonly class="cosine-side-c">
+                <button class="cosine-calculate">Calculate</button>
+            </form>
+            <form class="asymptote">
+                <h1>Asymptote Finder</h1>
+                <label>m Value:</label>
+                <input type="number" class="asymptote-m-value">
+                <label>n Value:</label>
+                <input type="number" class="asymptote-n-value">
+                <label>Asymptote Type (Result):</label>
+                <input readonly class="asymptote-type">
+                <button>Calculate</button>
+            </form>
+            <form class="pi-approximation">
+                <h1>Gregory-Leibniz Pi Approximation</h1>
+                <label>n Value:</label>
+                <input type="number" class="pi-approximation-n-value">
+                <label>Pi Approximation (Result):</label>
+                <input readonly class="pi-approximation-result">
+                <button>Calculate</button>
+            </form>
         </div>
     </body>
 </html>
