@@ -3,11 +3,10 @@
     <head>
         <title>Calculators</title>
         <link href="/static/styles.css" rel="stylesheet">
-        <script src="/static/script.js"></script>
     </head>
     <body>
         <div class="calculators">
-            <form class="cosine-law">
+            <form class="cosine-law" onsubmit="return CalculateCosineLaw(event)">
                 <h1>Cosine Law</h1>
                 <label>Side a:</label>
                 <input type="number" id="cosine-side-a">
@@ -17,17 +16,17 @@
                 <input type="number" id="cosine-angle-c">
                 <label>Side c (Result):</label>
                 <input readonly class="cosine-side-c">
-                <button class="cosine-calculate">Calculate</button>
+                <button class="cosine-calculate" type="submit">Calculate</button>
             </form>
-            <form class="asymptote">
+            <form class="asymptote" onsubmit="return CalculateAsymptote(event)">
                 <h1>Asymptote Finder</h1>
                 <label>m Value:</label>
-                <input type="number" class="asymptote-m-value">
+                <input type="number" id="asymptote-m-value">
                 <label>n Value:</label>
-                <input type="number" class="asymptote-n-value">
+                <input type="number" id="asymptote-n-value">
                 <label>Asymptote Type (Result):</label>
                 <input readonly class="asymptote-type">
-                <button>Calculate</button>
+                <button class="asymptote-calculate" type="submit">Calculate</button>
             </form>
             <form class="pi-approximation">
                 <h1>Gregory-Leibniz Pi Approximation</h1>
@@ -38,5 +37,6 @@
                 <button>Calculate</button>
             </form>
         </div>
+        <script src="/static/script.js"></script>
     </body>
 </html>
