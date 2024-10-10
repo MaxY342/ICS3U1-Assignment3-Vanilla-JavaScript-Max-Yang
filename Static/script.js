@@ -36,6 +36,14 @@ function Asymptote(mValue, nValue) {
     }
 }
 
+function GregoryLeibnizPiApproximation(nValue) {
+    output = 0
+    for (i = 0; i < nValue; i++) {
+        output += Math.pow(-1, i) / (2 * i + 1)
+    }
+    return 4 * output;
+}
+
 function CalculateCosineLaw(e) {
     e.preventDefault();
 
@@ -55,4 +63,14 @@ function CalculateAsymptote(e) {
     const asymptoteTypeOutput = document.querySelector(".asymptote-type");
 
     asymptoteTypeOutput.value = Asymptote(mValue, nValue);
+}
+
+
+function CalculateGregoryLeibnizPiApproximation(e) {
+    e.preventDefault();
+
+    let nValue = parseFloat(document.getElementById("pi-approximation-n-value").value);
+    const piApproximationOutput = document.querySelector(".pi-approximation-result");
+
+    piApproximationOutput.value = GregoryLeibnizPiApproximation(nValue);
 }
