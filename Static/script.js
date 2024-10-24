@@ -47,9 +47,9 @@ function GregoryLeibnizPiApproximation(nValue) {
 function CalculateCosineLaw(e) {
     e.preventDefault();
 
-    let aSide = parseFloat(document.getElementById("cosine-side-a").value);
-    let bSide = parseFloat(document.getElementById("cosine-side-b").value);
-    let cAngle = parseFloat(document.getElementById("cosine-angle-c").value);
+    let aSide = document.getElementById("cosine-side-a").value;
+    let bSide = document.getElementById("cosine-side-b").value;
+    let cAngle = document.getElementById("cosine-angle-c").value;
     const cosineLawOutput = document.querySelector(".cosine-side-c");
 
     cosineLawOutput.value = CosineLaw(aSide, bSide, cAngle);
@@ -58,8 +58,8 @@ function CalculateCosineLaw(e) {
 function CalculateAsymptote(e) {
     e.preventDefault();
 
-    let nValue = parseFloat(document.getElementById("asymptote-n-value").value);
-    let mValue = parseFloat(document.getElementById("asymptote-m-value").value);
+    let nValue = document.getElementById("asymptote-n-value").value;
+    let mValue = document.getElementById("asymptote-m-value").value;
     const asymptoteTypeOutput = document.querySelector(".asymptote-type");
 
     asymptoteTypeOutput.value = Asymptote(mValue, nValue);
@@ -69,7 +69,7 @@ function CalculateAsymptote(e) {
 function CalculateGregoryLeibnizPiApproximation(e) {
     e.preventDefault();
 
-    let nValue = parseFloat(document.getElementById("pi-approximation-n-value").value);
+    let nValue = document.getElementById("pi-approximation-n-value").value;
     const piApproximationOutput = document.querySelector(".pi-approximation-result");
 
     piApproximationOutput.value = GregoryLeibnizPiApproximation(nValue);
