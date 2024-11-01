@@ -7,7 +7,7 @@ function Asymptote(mValue, nValue) {
     if (mValue == nValue) {
         return "The asymptote is horizontal";
     }
-    else if (nValue > mValue) {
+    else if (nValue < mValue) {
         return "The asymptote is the x-axis";
     }
     else {
@@ -58,8 +58,8 @@ function CalculateCosineLaw(e) {
 function CalculateAsymptote(e) {
     e.preventDefault();
 
-    let nValue = document.getElementById("asymptote-n-value").value;
     let mValue = document.getElementById("asymptote-m-value").value;
+    let nValue = document.getElementById("asymptote-n-value").value;
     const asymptoteTypeOutput = document.querySelector(".asymptote-type");
 
     asymptoteTypeOutput.value = Asymptote(mValue, nValue);
